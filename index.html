@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        html, body{
+            margin: 0;
+        }
+    
+        section{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        #block{
+            height: 70%;
+            width: 70%;
+            background-color: black;
+            background-image: url(kiev.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+        p{
+            color: aliceblue;
+        }
+    
+    </style>
+</head>
+<body>
+  
+     <section>
+        <div id="block">
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quisquam nobis ullam, vel eveniet, earum dolorum modi vitae consectetur itaque.</p>
+         </div>
+    </section>
+    
+   <script src="jquery-3.1.1.min.js"></script>
+   <script src="jquery.filterPlug.js"></script>
+   <script>
+        $('#block').filterPlug({
+            filter: 'grayscale', //select blur, grayscale, brightness or contrast
+            scale: 'hight' //select hight, middle or low
+        });
+    </script>
+    </body>
+</html>
